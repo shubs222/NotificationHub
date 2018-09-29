@@ -12,39 +12,43 @@ namespace NHUB
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            if (!(Page.IsPostBack))
+            if (Page.IsPostBack)
             {
                 for (int count = 0; count < 5; count++)
                 {
-                    Label NotificationName = new Label();
-                    HyperLink EditLink = new HyperLink();
-                    HyperLink DeleteLink = new HyperLink();
-                    NotificationName.Text = "Shubham" + 1;
-                    NotificationName.Width = 200;
-                    NotificationPlaceHolder.Controls.Add(NotificationName);
-                    EditLink.Text = "Edit";
-                    EditLink.Width = 200;
-                    NotificationPlaceHolder.Controls.Add(EditLink);
-                    DeleteLink.Text = "Delete" + "<br/>";
+                    HyperLink button = new HyperLink();
+                    button.Text = "Click";
+                    NotificationPlaceHolder.Controls.Add(button);
+                    button.NavigateUrl = "Notifications?=" + count;
+                    //EditLink.Text = "Edit";
+                    //EditLink.Width = 200;
+                    //NotificationPlaceHolder.Controls.Add(EditLink);
+                    //DeleteLink.Text = "Delete" + "<br/>";
 
-                    NotificationPlaceHolder.Controls.Add(DeleteLink);
+                    //NotificationPlaceHolder.Controls.Add(DeleteLink);
+                }
+            }
+
+            else
+            {
+                int id = Convert.ToInt32(Request.QueryString["id"]);
+                Label lb;
+                for (int i = 0; i < 5; i++)
+                {
+                    lb = new Label();
+                    lb.Text = "shubham" + id + i + "<br/>";
+                    NotificationPlaceHolder.Controls.Add(lb);
+
                 }
             }
         }
+       
+        
 
-        protected void TestButton_Click(object sender, EventArgs e)
+
+        protected void AddNotificationButton_Click(object sender, EventArgs e)
         {
-
-        }
-
-        protected void Test2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-
+            Response.Redirect("AddEvent.aspx");
         }
     }
 }

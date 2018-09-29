@@ -36,8 +36,7 @@
                 <tr>
                     <td class="text-center" style="width: 339px; height: 29px;">Confidential Event</td>
                     <td style="height: 29px; width: 341px">
-                        <asp:CheckBox ID="ConfidentialCheckBox" runat="server" />
-                    </td>
+                        &nbsp;</td>
                     <td style="height: 29px"></td>
                 </tr>
                 <tr>
@@ -57,7 +56,7 @@
                         <asp:Button ID="CancelButton" runat="server" Height="31px" Text="Cancel" Width="89px" />
                     </td>
                     <td>
-                        <asp:Button ID="UpdateButton" runat="server" Text="Update" />
+                        <asp:Button ID="UpdateButton" runat="server" Text="Update" Height="27px" Width="80px" />
                     </td>
                 </tr>
             </table>
