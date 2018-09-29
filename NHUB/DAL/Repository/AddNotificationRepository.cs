@@ -7,6 +7,8 @@ using DAL.Model;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Web.UI.WebControls;
+
 namespace DAL.Repository
 {
     public class AddNotificationRepository
@@ -123,7 +125,29 @@ namespace DAL.Repository
                 }
             }
         }
-       
+        
+        public DataTable GetData(string query)
+        {
+            DataTable dt = new DataTable();
+           
+            using (SqlConnection con = new SqlConnection(Connections.Constring))
+            {
+                using (SqlCommand cmd = new SqlCommand(query))
+                {
+                    using (SqlDataAdapter sda = new SqlDataAdapter())
+                    {
+                        cmd.CommandType = CommandType.Text;
+                        cmd.Connection = con;
+                        sda.SelectCommand = cmd;
+                        sda.Fill(dt);
+                    }
+                }
+                return dt;
+            }
+        }
+
+
+
     }
-    
+
 }
