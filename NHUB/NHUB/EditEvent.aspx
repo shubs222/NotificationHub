@@ -8,15 +8,16 @@
                 <tr>
                     <td class="text-center" style="width: 339px">Source:</td>
                     <td style="width: 341px">
-                        <asp:DropDownList ID="SourceList" runat="server" Height="28px" Width="129px">
+                        <asp:DropDownList ID="SourceList" runat="server" Height="37px" Width="200px" DataSourceID="SqlDataSource1" DataTextField="Name" DataValueField="Id">
                         </asp:DropDownList>
+                        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:NotificationHubConnectionString2 %>" SelectCommand="SELECT [Id], [Name] FROM [Source]"></asp:SqlDataSource>
                     </td>
                     <td>&nbsp;</td>
                 </tr>
                 <tr>
                     <td class="text-center" style="width: 339px; height: 39px">Name:</td>
                     <td style="height: 39px; width: 341px;">
-                        <asp:TextBox ID="NameTextBox" runat="server"></asp:TextBox>
+                        <asp:TextBox ID="NameTextBox" runat="server" Height="22px" Width="200px"></asp:TextBox>
                     </td>
                     <td style="height: 39px"></td>
                 </tr>

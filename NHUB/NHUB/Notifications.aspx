@@ -4,22 +4,18 @@
     <script lang="javascript">
 
     </script>
-        <div class="auto-style1" style="height: 520px; z-index: 1; width: 919px; position: relative; top: 30px; left: 4px">
-            <h1>Notifications:</h1>
+        <div class="auto-style1" style="height: 699px; z-index: 1; width: 934px; position: relative; top: 2px; left: -5px; text-align: right;">
+            <h1 class="text-left">Notifications:</h1>
                
-            <div style="width: 771px; height: 266px; position: relative; left: -237px; top: 21px; z-index: 1; margin-left: 240px; margin-top: 0px"> 
+            <div  style="width: 771px; height: 205px; position: relative; left: -237px; top: 10px; z-index: 1; margin-left: 240px; margin-top: 0px" class="text-left"> 
 
-                <asp:Button ID="TestButton" runat="server" OnClick="TestButton_Click" Text="Click1" Width="149px" />
-             
-                <br />
-             
-                <asp:PlaceHolder ID="NotificationPlaceHolder" runat="server"></asp:PlaceHolder>
-              
-                <br />
-              
-                <asp:Button ID="Test2" runat="server" OnClick="Test2_Click" Text="Click2" Width="161px" />
+                
+                    <asp:PlaceHolder ID="NotificationPlaceHolder" runat="server"></asp:PlaceHolder>
+            
 
             </div>
+             <br />
 
-        &nbsp;</div>
+       <asp:Button ID="AddNotificationButton" runat="server" style="width: 136px; z-index: 1; position: absolute; top: 467px; left: 771px;" Text="Add Notification" OnClick="AddNotificationButton_Click" Height="49px" />
+    </div>
 </asp:Content>

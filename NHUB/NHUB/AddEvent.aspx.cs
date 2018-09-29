@@ -13,5 +13,10 @@ namespace NHUB
         {
 
         }
+
+        protected void AddButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Notification.aspx");
+        }
     }
 }
