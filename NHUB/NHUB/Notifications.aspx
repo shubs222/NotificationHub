@@ -1,25 +1,29 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="Notifications.aspx.cs" Inherits="NHUB.Notifications" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-    <script lang="javascript">
+   
+        <div class="auto-style1" style="height: 100%; z-index: 1; width: 100%; position: relative; top: 22px; left: -5px; text-align: right;">
+            <h1 class="text-left">Notifications:</h1>
+            <p class="text-left">
+               <asp:PlaceHolder ID="NotificationPlaceHolder" runat="server"></asp:PlaceHolder>
+            </p>
 
-    </script>
-        <div class="auto-style1" style="height: 520px; z-index: 1; width: 919px; position: relative; top: 30px; left: 4px">
-            <h1>Notifications:</h1>
-               
-            <div style="width: 771px; height: 266px; position: relative; left: -237px; top: 21px; z-index: 1; margin-left: 240px; margin-top: 0px"> 
+                    <strong>
+                          
+                    <asp:TreeView ID="TreeView1" runat="server" style="height: 196px; font-family: Arial; font-size: large; color: #0000FF;" Width="122px" BackColor="White" ExpandDepth="0" ForeColor="#0066FF" ImageSet="Arrows">
+                        <HoverNodeStyle Font-Underline="True" ForeColor="#5555DD" />
+                        <NodeStyle Font-Names="Verdana" Font-Size="8pt" ForeColor="Black" HorizontalPadding="5px" NodeSpacing="0px" VerticalPadding="0px" />
+                        <ParentNodeStyle Font-Bold="False" />
+                        <SelectedNodeStyle Font-Underline="True" ForeColor="#5555DD" HorizontalPadding="0px" VerticalPadding="0px" />
+                    </asp:TreeView>
+                       
+            
+          
+             </strong>
+            
+          
+             <br />
 
-                <asp:Button ID="TestButton" runat="server" OnClick="TestButton_Click" Text="Click1" Width="149px" />
-             
-                <br />
-             
-                <asp:PlaceHolder ID="NotificationPlaceHolder" runat="server"></asp:PlaceHolder>
-              
-                <br />
-              
-                <asp:Button ID="Test2" runat="server" OnClick="Test2_Click" Text="Click2" Width="161px" />
-
-            </div>
-
-        &nbsp;</div>
+       <asp:Button ID="AddNotificationButton" runat="server" style="margin-top: 0;" Text="Add Notification" OnClick="AddNotificationButton_Click" Height="58px" />
+    </div>
 </asp:Content>
