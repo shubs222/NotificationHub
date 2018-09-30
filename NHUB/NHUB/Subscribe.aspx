@@ -28,12 +28,14 @@
                     <tr>
                         <td class="text-center" style="width: 425px">Confidential Events:</td>
                         <td>
-                            <input id="Checkbox5" type="checkbox" /></td>
+                            <asp:CheckBox ID="ConfCheck" runat="server" />
+                        </td>
                     </tr>
                     <tr>
                         <td class="text-center" style="width: 425px">Mandetory Events: </td>
                         <td>
-                            <input id="Checkbox6" style="width: 32px; height: 21px" type="checkbox" /></td>
+                            <asp:CheckBox ID="MandCheck" runat="server" />
+                        </td>
                     </tr>
                     <tr>
                         <td class="text-center" style="width: 425px">Service LIne:</td>
@@ -44,19 +46,23 @@
                     </tr>
                     <tr>
                         <td class="text-center" style="width: 425px">End User:</td>
-                        <td>
-                            <textarea id="TextArea1" name="S1" rows="2" style="width: 166px"></textarea>
-                            <asp:CheckBoxList ID="CheckBoxList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="UserName" DataValueField="Id">
+                        <td>&nbsp;<asp:CheckBoxList ID="CheckBoxList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="UserName" DataValueField="Id">
                             </asp:CheckBoxList>
                             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:NotificationHubConnectionString %>" SelectCommand="SELECT [Id], [UserName] FROM [AspNetUsers]"></asp:SqlDataSource>
+                            <br />
+                            <asp:Button ID="AddUser" runat="server" OnClick="AddUser_Click" Text="AddUser" />
+                            <br />
+&nbsp;&nbsp;&nbsp;
+                            <br />
+                            <asp:TextBox ID="TextBox1" runat="server" Height="46px" Width="249px"></asp:TextBox>
                         </td>
                     </tr>
                     <tr>
                         <td class="text-center" style="width: 425px">
-                            <asp:Button ID="CancleButton" runat="server" Text="Cancel" />
+                            <asp:Button ID="CancleButton" runat="server" Height="32px" OnClick="CancleButton_Click" Text="Cancel" Width="74px" />
                         </td>
                         <td>
-                            <asp:Button ID="UpdateButton" runat="server" Text="Update" />
+                            <asp:Button ID="UpdateButton" runat="server" Height="31px" OnClick="UpdateButton_Click" Text="Update" Width="88px" />
                         </td>
                     </tr>
                 </table>

@@ -93,5 +93,10 @@ namespace NHUB
             }
             
         }
+
+        protected void CancelButton_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Notifications.aspx");
+        }
     }
 }

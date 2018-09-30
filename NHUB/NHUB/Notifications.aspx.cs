@@ -46,58 +46,57 @@ namespace NHUB
                         HyperLink delete = new HyperLink();
                         Edit.Text = "Edit";
                         Edit.Width = 200;
-                        string xxx = dataEvenets.Rows[i]["Id"].ToString();
+                        string qstr = dataEvenets.Rows[i]["Id"].ToString();
                         Edit.NavigateUrl = "EditEvent?Id=" + dataEvenets.Rows[i]["Id"];
                         NotificationPlaceHolder.Controls.Add(Edit);
                         delete.Text = "Delete" + "<br/>";
-                        delete.NavigateUrl = "DeleteEvent?id=" + xxx;
+                        delete.NavigateUrl = "DeleteEvent?id=" + qstr;
                         NotificationPlaceHolder.Controls.Add(delete);
 
                     }
 
                 }
 
-            }
-            
-          
-
-                for (int Sourcecount = 0; Sourcecount < notificationsRepository.SourceList.Count; Sourcecount++)
-                {
-
-                    Label lb = new Label();
-                    lb.Text = notificationsRepository.SourceList[Sourcecount].SourceName1 + "<br/>";
-                    lb.ID = "count";
-                    NotificationPlaceHolder.Controls.Add(lb);
-                    AddNotificationButton.Visible = false;
-
-                    DataTable dataEvenets = addNotificationRepository.GetEventData(notificationsRepository.SourceList[Sourcecount].SourceId).Tables[0];
-                    for (int i = 0; i < dataEvenets.Rows.Count; i++)
-                    {
-                        Label Name = new Label();
-                        
-                        Name.Text = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + dataEvenets.Rows[i]["Name"] + "<br/>";
-                        NotificationPlaceHolder.Controls.Add(Name);
-                        Name.Width = 300;
-                        HyperLink Edit = new HyperLink();
-                        HyperLink delete = new HyperLink();
-                        Edit.Text = "Edit";
-                        Edit.Width = 200;
-                        string xxx = dataEvenets.Rows[i]["Id"].ToString();
-                        Edit.NavigateUrl = "EditEvent?Id=" + dataEvenets.Rows[i]["Id"];
-                        NotificationPlaceHolder.Controls.Add(Edit);
-                        delete.Text = "UnSubscibe" + "<br/>";
-                        delete.NavigateUrl = "Unsubscribe?id=" + xxx;
-                        NotificationPlaceHolder.Controls.Add(delete);
-
-                    }
-                }
-
-            
         }
-       
 
 
-        private void PopulateTreeView(DataTable dtParent, int parentId, TreeNode treeNode)
+            for (int Sourcecount = 0; Sourcecount < notificationsRepository.SourceList.Count; Sourcecount++)
+            {
+
+                Label lb = new Label();
+                lb.Text = notificationsRepository.SourceList[Sourcecount].SourceName1 + "<br/>";
+                lb.ID = "count";
+                NotificationPlaceHolder.Controls.Add(lb);
+                AddNotificationButton.Visible = false;
+
+                DataTable dataEvenets = addNotificationRepository.GetEventData(notificationsRepository.SourceList[Sourcecount].SourceId).Tables[0];
+                for (int i = 0; i < dataEvenets.Rows.Count; i++)
+                {
+                    Label Name = new Label();
+
+                    Name.Text = "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" + dataEvenets.Rows[i]["Name"] + "<br/>";
+                    NotificationPlaceHolder.Controls.Add(Name);
+                    Name.Width = 300;
+                    HyperLink Edit = new HyperLink();
+                    HyperLink delete = new HyperLink();
+                    Edit.Text = "Edit";
+                    Edit.Width = 200;
+                    string xxx = dataEvenets.Rows[i]["Id"].ToString();
+                    Edit.NavigateUrl = "EditEvent?Id=" + dataEvenets.Rows[i]["Id"];
+                    NotificationPlaceHolder.Controls.Add(Edit);
+                    delete.Text = "UnSubscribe" + "<br/>";
+                    delete.NavigateUrl = "Subscribe?id=" + xxx;
+                    NotificationPlaceHolder.Controls.Add(delete);
+
+                }
+            }
+
+
+        }
+
+
+
+            private void PopulateTreeView(DataTable dtParent, int parentId, TreeNode treeNode)
             {
 
             //foreach (DataRow row in dtParent.Rows)

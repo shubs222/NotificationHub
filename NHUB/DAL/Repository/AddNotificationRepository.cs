@@ -176,10 +176,8 @@ namespace DAL.Repository
             using (SqlConnection connection = new SqlConnection())
             {
                 connection.ConnectionString = Connections.Constring;
-
                 connection.Open();
-
-                string sql = "Delete from EventChannel where EventId=" + EventId;
+                string  sql = "Delete from EventChannel where EventId=" + EventId;
                 SqlCommand sqlCommand = new SqlCommand(sql, connection);
                 // SqlDataAdapter da = new SqlDataAdapter(sqlCommand);
                 sqlCommand.ExecuteNonQuery();
@@ -187,7 +185,6 @@ namespace DAL.Repository
                 sqlCommand = new SqlCommand(sql, connection);
                 // SqlDataAdapter da = new SqlDataAdapter(sqlCommand);
                 sqlCommand.ExecuteNonQuery();
-
             }
         }
         public void DeleteChannel(int eventid)
@@ -220,8 +217,6 @@ namespace DAL.Repository
                 sqlCommand.ExecuteNonQuery();
             }
         }
-        
-    
 
         public DataTable GetData(string query)
         {

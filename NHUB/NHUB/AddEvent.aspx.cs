@@ -41,6 +41,7 @@ namespace NHUB
                     }
                 }
                 Response.Redirect("Notifications.aspx");
+               
             }
             
         }

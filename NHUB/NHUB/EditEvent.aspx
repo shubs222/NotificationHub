@@ -98,7 +98,7 @@
             <table align="center" class="nav-justified" style="height: 41px; width: 89%; position: relative; left: 0px; top: 50px;">
                 <tr>
                     <td class="text-center" style="width: 434px">
-                        <asp:Button ID="CancelButton" runat="server" Height="31px" Text="Cancel" Width="89px" />
+                        <asp:Button ID="CancelButton" runat="server" Height="31px" Text="Cancel" Width="89px" OnClick="CancelButton_Click" />
                     </td>
                     <td>
                         <asp:Button ID="UpdateButton" runat="server" Text="Update" OnClick="UpdateButton_Click" />
