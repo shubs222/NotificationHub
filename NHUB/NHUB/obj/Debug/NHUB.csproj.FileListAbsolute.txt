@@ -100,3 +100,5 @@ D:\My Tasks\NHUB\NHUB\obj\Debug\NHUB.csproj.CoreCompileInputs.cache
 D:\My Tasks\NHUB\NHUB\obj\Debug\NHUB.csproj.CopyComplete
 D:\My Tasks\NHUB\NHUB\obj\Debug\NHUB.dll
 D:\My Tasks\NHUB\NHUB\obj\Debug\NHUB.pdb
+D:\My Tasks\NHUB\NHUB\bin\DAL.dll
+D:\My Tasks\NHUB\NHUB\bin\DAL.pdb

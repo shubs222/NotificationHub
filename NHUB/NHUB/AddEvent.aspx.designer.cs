@@ -22,6 +22,15 @@ namespace NHUB {
         protected global::System.Web.UI.WebControls.DropDownList SourceDropList;
         
         /// <summary>
+        /// SqlDataSource1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        
+        /// <summary>
         /// NameTextBox control.
         /// </summary>
         /// <remarks>
@@ -40,40 +49,22 @@ namespace NHUB {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator NameValidator;
         
         /// <summary>
-        /// IntranetCheckBox control.
+        /// ChannelCheckBoxList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox IntranetCheckBox;
+        protected global::System.Web.UI.WebControls.CheckBoxList ChannelCheckBoxList;
         
         /// <summary>
-        /// EmailsCheckBox control.
+        /// SqlDataSource2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox EmailsCheckBox;
-        
-        /// <summary>
-        /// UnabotCheckboc control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox UnabotCheckboc;
-        
-        /// <summary>
-        /// SmsCheckBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox SmsCheckBox;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource2;
         
         /// <summary>
         /// ConfidentialEventCheckBox control.

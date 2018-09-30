@@ -13,15 +13,6 @@ namespace NHUB {
     public partial class Notifications {
         
         /// <summary>
-        /// TestButton control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button TestButton;
-        
-        /// <summary>
         /// NotificationPlaceHolder control.
         /// </summary>
         /// <remarks>
@@ -31,12 +22,21 @@ namespace NHUB {
         protected global::System.Web.UI.WebControls.PlaceHolder NotificationPlaceHolder;
         
         /// <summary>
-        /// Test2 control.
+        /// TreeView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Test2;
+        protected global::System.Web.UI.WebControls.TreeView TreeView1;
+        
+        /// <summary>
+        /// AddNotificationButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button AddNotificationButton;
     }
 }
